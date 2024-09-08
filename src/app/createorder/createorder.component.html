@@ -1,0 +1,79 @@
+<div class="modal">
+    <div class="modal-content">
+        <div class="content-container">
+        <div class="header">
+            <h2>{{ customerName }} - New Order</h2>
+        </div>
+        <legend>Order</legend>
+        <form>
+            <div class="form-row">
+              <div class="form-group">
+                <select class="form-control" [(ngModel)]="empId" name="empId" title="Select Employee">
+                    <option value="" disabled selected hidden>Employee</option>
+                    <option *ngFor="let employee of employees" [value]="employee.empId">{{ employee.fullName }}</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" [(ngModel)]="shipperId" name="shipperId" title="Select Shipper">
+                    <option value="" disabled selected hidden>Shipper</option>
+                    <option *ngFor="let shipper of shippers" [value]="shipper.shipperId">{{ shipper.companyName }}</option>
+                  </select>              
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control alone" [(ngModel)]="shipName" name="shipName" placeholder="Ship Name">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="shipAddress" name="shipAddress" placeholder="Ship Address">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="shipCity" name="shipCity" placeholder="Ship City">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="shipCountry" name="shipCountry" placeholder="Ship Country">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="orderDate" placeholder="Order Date" name="orderDate" pattern="\d{4}-\d{2}-\d{2}" onfocus="(this.type='date')" onblur="(this.type='text')" min="{{ today }}">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="requiredDate" placeholder="Required Date" name="requiredDate" pattern="\d{4}-\d{2}-\d{2}" onfocus="(this.type='date')" onblur="(this.type='text')" min="{{ today }}">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="shippedDate" placeholder="Shipped Date" name="shippedDate" pattern="\d{4}-\d{2}-\d{2}" onfocus="(this.type='date')" onblur="(this.type='text')" min="{{ today }}">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.01" min="0" class="form-control alone" [(ngModel)]="freight" name="freight" placeholder="$ Freigh">
+            </div>
+            <hr class="separator">
+            <legend>Order Details</legend>
+            <div class="form-row">
+                <div class="form-group">
+                  <select class="form-control alone" title="Products" (change)="onProductChange($event)" [(ngModel)]="productId" name="productId">
+                      <option value="" disabled selected hidden>Products</option>
+                      <option *ngFor="let product of products" [value]="product.productId">{{ product.productName }}</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" class="form-control" [(ngModel)]="unitPrice" name="unitPrice" placeholder="$ Unit Price" [value]="selectedProductPrice!== null ? selectedProductPrice : ''" readonly>                
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" [(ngModel)]="qty" name="qty" placeholder="Quatity">
+                </div>
+                <div class="form-group">
+                  <input type="number" step="0.01" min="0" class="form-control" [(ngModel)]="discount" name="discount"  placeholder="Discount">
+                </div>
+            </div>
+        </form>
+        <div class="footer">            
+            <button class="close-button" (click)="closeModal2()">Close</button>
+            <button class="close-button" (click)="saveOrder()">Save</button>
+        </div>
+    </div>
+    </div>
+</div>

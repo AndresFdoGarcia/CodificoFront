@@ -1,0 +1,41 @@
+<div class="modal">
+    <div class="modal-content">
+        <div class="content-container">
+        <div class="header">
+            <h2>{{ customerName }} - Orders</h2>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Required Date</th>
+                        <th>Shipped Date</th>
+                        <th>Ship Name</th>
+                        <th>Ship Address</th>
+                        <th>Ship City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders;">
+                        <td>{{ order.orderId }}</td>
+                        <td>{{ order.requiredDate }}</td>
+                        <td>{{ order.shippedDate }}</td>
+                        <td>{{ order.shipname }}</td>
+                        <td>{{ order.shipaddress }}</td>
+                        <td>{{ order.shipcity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <span>Page 1 of 10</span>
+            <button>&laquo; Previous</button>
+            <button>Next &raquo;</button>
+        </div>
+        <div class="footer">
+            <button class="close-button" (click)="closeModal()">Close</button>
+        </div>
+    </div>
+    </div>
+</div>
