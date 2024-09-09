@@ -42,5 +42,5 @@
     <!-- Contenido del modal -->
 </app-vieworder>
 
-<app-createorder *ngIf="isModalOpen2" [customerName]="selectedCustomer.customerName" (close)="closeModal2()"></app-createorder>
+<app-createorder *ngIf="isModalOpen2" [customerName]="selectedCustomer.customerName" [customerId]="selectedCustomer.customerId" (close)="closeModal2()"></app-createorder>
 

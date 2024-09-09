@@ -31,6 +31,6 @@ export class CustomerService {
   }
 
   postOrder(orderData: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/CreateNewOrder`, orderData);
+    return this.http.post<any>(`${this.apiUrl}/CreateNewOrder`, orderData);    
   }
 }

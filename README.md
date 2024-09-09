@@ -1,27 +1,31 @@
 # ApiNserio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+### Descripción
 
-## Development server
+ApiNserio es una aplicación web desarrollada con Angular [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3. que permite gestionar órdenes de compra. Incluye funcionalidades para cargar transportistas, productos y realizar pedidos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Tecnologías Usadas 🛠️
+Angular: Framework principal para el desarrollo de la aplicación.
+TypeScript: Lenguaje de programación utilizado.
+RxJS: Librería para programación reactiva.
 
-## Code scaffolding
+### Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para instalar y configurar el proyecto, sigue estos pasos:
 
-## Build
+1. Clona el repositorio:
+   ```sh
+   git clone AndresFdoGarcia/CodificoFront
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Ejecutar `ng build` para hacer buil del proyecto. Se debe nacegar a la carpeta raiz
 
-## Running unit tests
+### Ejecución del Proyecto 🚀
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecutar `ng serve -o` para arrancar el proyecto y se abra el navegador. 
 
-## Running end-to-end tests
+### Autor ✒️
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Andrés Fernando García Perea** - [AndresFdoGarcia](https://github.com/AndresFdoGarcia)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```

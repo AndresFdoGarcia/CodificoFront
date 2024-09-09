@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class CreateOrderComponent implements OnInit {
   @Input() customerName: string = '';
   @Input() orders: any[] = [];
+  @Input() customerId: number = 0;
   @Output() close = new EventEmitter<void>();
 
   employees: any[] = [];
@@ -22,8 +23,7 @@ export class CreateOrderComponent implements OnInit {
 
 
   // Form fields
-  empId: number = 0;
-  custId: number = 0;
+  empId: number = 0;  
   shipperId: number = 0;
   shipName: string = '';
   shipAddress: string = '';
@@ -33,8 +33,7 @@ export class CreateOrderComponent implements OnInit {
   shippedDate: string = '';
   freight: number = 0;
   shipCountry: string = '';
-  productId: number = 0;
-  unitPrice: number = 0;
+  productId: number = 0;  
   qty: number = 0;
   discount: number = 0;
 
@@ -82,7 +81,7 @@ export class CreateOrderComponent implements OnInit {
   saveOrder() {
     const orderData = {
       empId: this.empId,
-      custId: this.custId,
+      custId: this.customerId,
       shipperId: this.shipperId,
       shipName: this.shipName,
       shipAddress: this.shipAddress,
@@ -93,7 +92,7 @@ export class CreateOrderComponent implements OnInit {
       freight: this.freight,
       shipCountry: this.shipCountry,
       productId: this.productId,
-      unitPrice: this.unitPrice,
+      unitPrice: this.selectedProductPrice,
       qty: this.qty,
       discount: this.discount
     };

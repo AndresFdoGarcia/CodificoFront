@@ -2,7 +2,7 @@
     <div class="modal-content">
         <div class="content-container">
         <div class="header">
-            <h2>{{ customerName }} - New Order</h2>
+            <h2>{{ customerName }} - New Order</h2>            
         </div>
         <legend>Order</legend>
         <form>
@@ -60,7 +60,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <input type="text" class="form-control" [(ngModel)]="unitPrice" name="unitPrice" placeholder="$ Unit Price" [value]="selectedProductPrice!== null ? selectedProductPrice : ''" readonly>                
+                    <input type="text" class="form-control" [(ngModel)]="selectedProductPrice" name="selectedProductPrice" placeholder="$ Unit Price" [value]="selectedProductPrice!== null ? selectedProductPrice : ''" readonly>                
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control" [(ngModel)]="qty" name="qty" placeholder="Quatity">
